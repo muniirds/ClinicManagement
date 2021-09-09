@@ -7,13 +7,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "patientmanagement")
 public class Patient {
-	public Patient(long patientId, String patientFirstName, String patientLastName, long phoneNumber, String disease) {
+	public Patient(long patientId, String patientFirstName, String patientLastName, long phoneNumber) {
 		super();
 		this.patientId = patientId;
 		this.patientFirstName = patientFirstName;
 		this.patientLastName = patientLastName;
 		this.phoneNumber = phoneNumber;
-		this.disease = disease;
 	}
 
 	public Patient() {
@@ -25,12 +24,11 @@ public class Patient {
 	private String patientFirstName;
 	private String patientLastName;
 	private long phoneNumber;
-	private String disease;
 
 	@Override
 	public String toString() {
 		return "Patient [patientId=" + patientId + ", patientFirstName=" + patientFirstName + ", patientLastName="
-				+ patientLastName + ", phoneNumber=" + phoneNumber + ", disease=" + disease + "]";
+				+ patientLastName + ", phoneNumber=" + phoneNumber + "]";
 	}
 
 	@Override
@@ -102,12 +100,5 @@ public class Patient {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getDisease() {
-		return disease;
-	}
-
-	public void setDisease(String disease) {
-		this.disease = disease;
-	}
-
+	
 }
